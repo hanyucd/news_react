@@ -100,6 +100,7 @@
     padding-left: 10px;
     width: 460px;
     float: left;
+    margin-left: 20px;
 }
 
 .tabs_product {
@@ -214,6 +215,7 @@ iframe {
     -moz-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    margin-left: 50px;
 }
 
 .productlinks-item {
