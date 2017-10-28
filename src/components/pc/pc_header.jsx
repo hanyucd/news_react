@@ -1,6 +1,6 @@
 import React from 'react';
-import { Row, Col, Menu, Icon, Modal, Button, Tabs, Form, Input, notification, message } from 'antd';
-import { Link } from 'react-router';
+import { Row, Col, Menu, Icon, Modal, Button, Tabs, Form, Input, message } from 'antd';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import logo from '../../images/logo.png';
@@ -50,9 +50,9 @@ class PCHeader extends React.Component {
   changeTab(key) {
     // 重置一组输入控件的值
     this.props.form.resetFields();
-    if (key == 1) {
+    if (key === 1) {
       this.setState({ action: 'login' });
-    } else if (key == 2) {
+    } else if (key === 2) {
       this.setState({ action: 'register' });
     }
   }
@@ -92,7 +92,7 @@ class PCHeader extends React.Component {
       }).catch(error => {
         console.log("请求失败...");
       });
-      if(this.state.action == "login") {
+      if(this.state.action === "login") {
         this.setState({ hasLogined: true });
       }
       // 调方法

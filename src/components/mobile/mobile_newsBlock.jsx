@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Spin } from 'antd';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class MobileNewsBlock extends React.Component {
   constructor() {
@@ -26,7 +26,7 @@ class MobileNewsBlock extends React.Component {
             newsArray.map((item, index) => {
               return (
                 <Card key={ index } className="m_article list-item special_section clearfix">
-                  <Link to={ `news_detail/${item.uniquekey}` }>
+                  <Link to={ `/news_detail/${item.uniquekey}` }>
                     <div className="m_article_img">
                       <img src={ item.thumbnail_pic_s } alt={ item.title } />
                     </div>

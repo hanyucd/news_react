@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Card, Icon, notification } from 'antd';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const TabPane = Tabs.TabPane;

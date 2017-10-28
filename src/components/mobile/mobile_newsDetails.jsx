@@ -14,7 +14,7 @@ class MobileNewsDetails extends React.Component {
 
   // 组件已挂载时执行 （生命周期函数）
   componentDidMount() {
-    const news_id = this.props.params.news_id;
+    const news_id = this.props.match.params.news_id;
     let url = `http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=${ news_id }`;
     axios.get(url).then(response => {
       const news = response.data;
@@ -32,7 +32,7 @@ class MobileNewsDetails extends React.Component {
       <div>
         <div className="mobileDetailsContainer" dangerouslySetInnerHTML={ this.createMarkup() }></div>
         <hr />
-        <NewsComments newsId={ this.props.params.news_id } />
+        <NewsComments newsId={ this.props.match.params.news_id } />
         <MobileFooter />
       </div>
     );

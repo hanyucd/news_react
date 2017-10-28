@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Spin } from 'antd';
 import axios from 'axios';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class PCNewsBlock extends React.Component {
   constructor() {
@@ -35,7 +35,7 @@ class PCNewsBlock extends React.Component {
             newsArray.map((item, index) => {
               return (
                 <li key={ index }>
-                  <Link to={ `news_detail/${item.newsId}` } target="_blank">
+                  <Link to={ `/news_detail/${item.newsId}` } target="_blank">
                     { item.title }
                   </Link>
                 </li>
@@ -48,7 +48,7 @@ class PCNewsBlock extends React.Component {
             </div>
           );
     return (
-      <div class="topNewsList">
+      <div className="topNewsList">
         <Card>
           <ul>
             { newsList }

@@ -24,7 +24,8 @@ class PCNewsDetails extends React.Component {
   }
 
   _showDetails(props) {
-    const uniquekey = props.params.news_id;
+    const uniquekey = props.match.params.news_id;
+    console.log(uniquekey);
     let url = `http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=${ uniquekey }`;
     axios.get(url).then(response => {
       const news = response.data;
@@ -47,7 +48,7 @@ class PCNewsDetails extends React.Component {
           <Col span={ 16 } className="container">
             <div className="articleContainer" dangerouslySetInnerHTML={ this.createMarkup() }></div>
             <hr />
-            <NewsComments newsId={ this.props.params.news_id }/>
+            <NewsComments newsId={ this.props.match.params.news_id }/>
           </Col>
           <Col span={ 6 }>
             <PCNewsImageBlock type="top" count={ 20 } title="相关新闻" imageWidth="120px" width="100%" />

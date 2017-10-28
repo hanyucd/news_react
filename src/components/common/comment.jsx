@@ -8,7 +8,7 @@ class NewsComments extends React.Component {
     super();
     this.state = {
       comments: []
-    },
+    };
     // 构造函数绑定函数
     this.addCollection = this.addCollection.bind(this);
   }

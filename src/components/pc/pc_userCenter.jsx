@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Tabs, Card, Upload, Modal, Icon, notification } from 'antd';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const TabPane = Tabs.TabPane;
@@ -159,7 +159,7 @@ class PCUserCenter extends React.Component {
               </TabPane>
               {/* 图片上传 */}
               <TabPane tab={ tabIcon[2] } key="3">
-                <div class="clearfix">
+                <div className="clearfix">
                   <Upload { ...uploadArgument }
                    onPreview={ this.handlePreview }>
                     { uploadButton }

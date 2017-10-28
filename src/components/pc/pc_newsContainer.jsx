@@ -44,7 +44,7 @@ class PCNewsContainer extends React.Component {
                 <div><img src={ carousel_6 } alt="轮播图" /></div>
                 <div><img src={ carousel_7 } alt="轮播图" /></div>
               </Carousel>
-              <PCNewsImageBlock title='社會'  type='shehui' count={ 6 } width="400px" imageWidth="112px"/>
+              <PCNewsImageBlock title='社會'  type='shehui' count={ 6 } width="400px" imageWidth="110px"/>
             </div>
             <Tabs className="tabs_news">
               <TabPane tab={ tabTitles[0] } key="1">

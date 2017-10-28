@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Card, Spin } from 'antd';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class PCNewsImageBlock extends React.Component {
   constructor() {
@@ -48,7 +48,7 @@ class PCNewsImageBlock extends React.Component {
             newsArray.map((item, index) => {
               return (
                 <div key={ index } className="imageblock">
-                  <Link to={`news_detail/${item.newsId}`} target="_black">
+                  <Link to={`/news_detail/${item.newsId}`} target="_black">
                     <div className="custom-image">
                       <img src={ item.image_url } alt="" style={ imageStyle } />
                     </div>
