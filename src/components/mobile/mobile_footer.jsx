@@ -1,9 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-// import '../../../less/common';
-// import '../../../less/mobile/mobile_footer';
-
 const currentYear = new Date().getFullYear();
 
 class MobileFooter extends React.Component {

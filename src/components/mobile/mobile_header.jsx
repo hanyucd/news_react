@@ -3,6 +3,7 @@ import { Row, Col, Menu, Icon, Modal, Button, Tabs, Form, Input, notification, m
 import { Link } from 'react-router';
 import axios from 'axios';
 
+import logo from '../../images/logo.png';
 // 表单项
 const FormItem = Form.Item;
 // Tab项
@@ -38,7 +39,6 @@ class MobileHeader extends React.Component {
   // 点击菜单，选中点击的菜单项
   menuItemActive(event) {
     if (event.key === 'register') {
-      // this.setState({ current: 'register' });
       // 调用函数
       this.setModalVisible(true);
     } else {
@@ -118,7 +118,7 @@ class MobileHeader extends React.Component {
       <div id="mobileheader">
         <header>
           <a href="/">
-            <img src="./src/images/logo.png" alt="React Logo"/>
+            <img src={ logo } alt="React Logo"/>
             <span>React Web</span>
           </a>
           { userShow }
