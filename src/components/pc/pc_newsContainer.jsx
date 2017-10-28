@@ -3,6 +3,14 @@ import { Row, Col, Tabs, Carousel, Icon } from 'antd';
 import PCNewsBlock from './pc_newsBlock';
 import PCNewsImageBlock from './pc_imageBlock';
 import PCProducts from './pc_products';
+// 导入图片
+import carousel_1 from '../../images/carousel_1.jpg';
+import carousel_2 from '../../images/carousel_2.jpg';
+import carousel_3 from '../../images/carousel_3.jpg';
+import carousel_4 from '../../images/carousel_4.jpg';
+import carousel_5 from '../../images/carousel_5.jpg';
+import carousel_6 from '../../images/carousel_6.jpg';
+import carousel_7 from '../../images/carousel_7.jpg';
 
 const TabPane = Tabs.TabPane;
 
@@ -28,13 +36,13 @@ class PCNewsContainer extends React.Component {
           <Col span={ 22 } className="container">
             <div className="leftContainer">
               <Carousel { ...setting }>
-                <div><img src='./src/images/carousel_1.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_2.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_3.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_4.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_5.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_6.jpg' alt="轮播图" /></div>
-                <div><img src='./src/images/carousel_7.jpg' alt="轮播图" /></div>
+                <div><img src={ carousel_1 } alt="轮播图" /></div>
+                <div><img src={ carousel_2 } alt="轮播图" /></div>
+                <div><img src={ carousel_3 } alt="轮播图" /></div>
+                <div><img src={ carousel_4 } alt="轮播图" /></div>
+                <div><img src={ carousel_5 } alt="轮播图" /></div>
+                <div><img src={ carousel_6 } alt="轮播图" /></div>
+                <div><img src={ carousel_7 } alt="轮播图" /></div>
               </Carousel>
               <PCNewsImageBlock title='社會'  type='shehui' count={ 6 } width="400px" imageWidth="112px"/>
             </div>
