@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // 导入 PC 端组件
 import PCIndex from './components/pc/pc_index';
 import PCNewsDetails from './components/pc/pc_newsDetails';
@@ -23,22 +23,22 @@ class App extends React.Component {
         {/* PC端 */}
         <MediaQuery query="(min-device-width: 1224px)">
           <Router>
-            <div>
+            <Switch>
               <Route exact path="/" component={ PCIndex }></Route>
               <Route path="/news_detail/:news_id" component={ PCNewsDetails }></Route>
               <Route path="/user_center" component={ PCUserCenter }></Route>
-            </div>
+            </Switch>
           </Router>
         </MediaQuery>
 
         {/* 移动端 */}
         <MediaQuery query="(max-device-width: 1224px)">
           <Router>
-            <div>
+            <Switch>
               <Route exact path="/" component={ MobileIndex }></Route>
               <Route exact path="/news_detail/:news_id" component={ MobileNewsDetails }></Route>
               <Route path="/user_center" component={ MobileUserCenter }></Route>
-            </div>
+            </Switch>
           </Router>
         </MediaQuery>
       </div>

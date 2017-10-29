@@ -23,10 +23,10 @@ class PCNewsContainer extends React.Component {
     };
 
     const tabTitles = [
-      <span><Icon type="tag-o"/>國內新聞</span>,
-      <span><Icon type="tag-o"/>科技新聞</span>,
-      <span><Icon type="tag-o"/>娛樂新聞</span>,
-      <span><Icon type="windows"/>其他</span>
+      <span><Icon type="apple-o"/>國內新聞</span>,
+      <span><Icon type="android-o"/>科技新聞</span>,
+      <span><Icon type="windows-o"/>娛樂新聞</span>,
+      <span><Icon type="mobile"/>其他</span>
     ];
 
     return (

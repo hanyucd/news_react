@@ -29,7 +29,7 @@ class PCNewsBlock extends React.Component {
     });
   }
   render() {
-    const newsArray  = this.state.newsArray;
+    const newsArray = this.state.newsArray;
     const newsList = newsArray.length ?
           (
             newsArray.map((item, index) => {

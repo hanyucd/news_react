@@ -10,7 +10,7 @@ class PCFooter extends React.Component {
         <Row>
           <Col span={ 2 }></Col>
           <Col span={ 20 } className="footer">
-            &copy;&nbsp;{ currentYear } React News. Developer by hanyu.
+            &copy;&nbsp;{ currentYear } React Web. Developer by hanyu.
           </Col>
           <Col span={ 2 }></Col>
         </Row>
