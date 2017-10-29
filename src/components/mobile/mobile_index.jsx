@@ -37,22 +37,22 @@ class MobileIndex extends React.Component {
                 <div><img src={ carousel_7 } alt="轮播图" /></div>
               </Carousel>
             </div>
-            <MobileNewsBlock type="top" count={ 20 }/>
+            <MobileNewsBlock type="top" count={ 5 }/>
           </TabPane>
           <TabPane tab="社会" key="2" style={{ background: '#f6f6f6' }}>
-            <MobileNewsBlock type="shehui" count={ 20 }/>
+            <MobileNewsBlock type="shehui" count={ 5 }/>
           </TabPane>
           <TabPane tab="国内" key="3" style={{ background: '#f6f6f6' }}>
-            <MobileNewsBlock type="guonei" count={ 20 }/>
+            <MobileNewsBlock type="guonei" count={ 5 }/>
           </TabPane>
           <TabPane tab="国际" key="4" style={{ background: '#f6f6f6' }}>
-            <MobileNewsBlock type="guoji" count={ 20 }/>
+            <MobileNewsBlock type="guoji" count={ 5 }/>
           </TabPane>
           <TabPane tab="娱乐" key="5" style={{ background: '#f6f6f6' }}>
-            <MobileNewsBlock type="yule" count={ 20 }/>
+            <MobileNewsBlock type="yule" count={ 5 }/>
           </TabPane>
           <TabPane tab="科技" key="6" style={{ background: '#f6f6f6' }}>
-            <MobileNewsBlock type="keji" count={ 20 }/>
+            <MobileNewsBlock type="keji" count={ 5 }/>
           </TabPane>
         </Tabs>
         <MobileFooter />

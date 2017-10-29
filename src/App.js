@@ -11,7 +11,7 @@ import MobileUserCenter from './components/mobile/mobile_userCenter';
 
 // 移动端适配 （第三方库）
 import MediaQuery from 'react-responsive';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 
 import './style/pc.css';
 import './style/mobile.css';
