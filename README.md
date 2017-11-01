@@ -1,4 +1,4 @@
-<center>![React Logo](./react_icon.png "react logo")</center>
+![React Logo](./react_icon.png "react logo")
 
 
 此项目使用**脚手架工具**： [Create React App](https://github.com/facebookincubator/create-react-app).
