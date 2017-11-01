@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, BackTop} from 'antd';
+import { Row, Col, BackTop } from 'antd';
 import axios from 'axios';
 
 import PCHeader from './pc_header';
@@ -22,14 +22,14 @@ class PCNewsDetails extends React.Component {
   componentWillReceiveProps(nextProps) {
     this._showDetails(nextProps)
   }
-
+  // 私有函数
   _showDetails(props) {
     const uniquekey = props.match.params.news_id;
-    console.log(uniquekey);
     let url = `http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=${ uniquekey }`;
     axios.get(url).then(response => {
       const news = response.data;
       this.setState({ news });
+      // 更改网页标题
       document.title = news.title;
     })
   }
