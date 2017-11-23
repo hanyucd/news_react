@@ -18,15 +18,34 @@ class PCHeader extends React.Component {
       action: 'login',
       hasLogined: false,
       userNickName: '',
-      userId: 0
+      userId: 0,
+      dateTime: ''
     }
   }
-  // 生命周期函数（组件即将挂载）
-  componentWillMount() {
-    // if (localStorage.userId != '') {
-    //   this.setState({ hasLogined: true });
-    //   this.setState({ userNickName: localStorage.userNickName, userId: localStorage.userId });
-    // }
+  // 生命周期函数（组件挂载成功）
+  componentDidMount() {
+    // 间隔指定的毫秒数不停地执行指定的代码
+    this.timer = setInterval(this._getDateTime.bind(this), 1000)
+  }
+  ComponentWillUnmount() {
+    // 如果存在 this.timer，则使用 clearInterval 清空
+    this.timer && clearInterval(this.timer);
+  }
+
+  // 获取当前时间
+  _getDateTime() {
+    let date = new Date();
+    // 获取日期时间
+    let year = date.getFullYear(),
+        month = date.getMonth(),
+        day = date.getDay(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        seconds = date.getSeconds();
+    let date_time = `${ year }/${ month }/${ day } ${ hours }:${ minutes }:${ seconds }`;
+    this.setState({
+      dateTime: date_time
+    })
   }
 
   // 隐藏模态框
@@ -126,6 +145,7 @@ class PCHeader extends React.Component {
       </Menu.Item>
     );
 
+    let dateTime = this.state.dateTime;
     return (
       <header>
         <Row>
@@ -135,6 +155,7 @@ class PCHeader extends React.Component {
               <img src={ logo } alt="React Logo" />
               <span>React Web</span>
             </a>
+            <div style={{ color: "red" }}>{ dateTime }</div>
           </Col>
           <Col span = { 17 }>
             <Menu mode="horizontal" theme="dark" onClick={ this.menuItemActive.bind(this) } selectedKeys={ [this.state.current] }>
