@@ -37,8 +37,8 @@ class PCHeader extends React.Component {
     let date = new Date();
     // 获取日期时间
     let year = date.getFullYear(),
-        month = date.getMonth(),
-        day = date.getDay(),
+        month = date.getMonth() + 1,
+        day = date.getDate(),
         hours = date.getHours(),
         minutes = date.getMinutes(),
         seconds = date.getSeconds();
@@ -146,6 +146,13 @@ class PCHeader extends React.Component {
     );
 
     let dateTime = this.state.dateTime;
+    // 时间样式
+    let timeStyle = {
+      color: "#49a9ee",
+      textAlign: "center",
+      fontSize: "16px",
+      fontWeight: "bold"
+    };
     return (
       <header>
         <Row>
@@ -155,7 +162,7 @@ class PCHeader extends React.Component {
               <img src={ logo } alt="React Logo" />
               <span>React Web</span>
             </a>
-            <div style={{ color: "red" }}>{ dateTime }</div>
+            <div style={ timeStyle }>{ dateTime }</div>
           </Col>
           <Col span = { 17 }>
             <Menu mode="horizontal" theme="dark" onClick={ this.menuItemActive.bind(this) } selectedKeys={ [this.state.current] }>
